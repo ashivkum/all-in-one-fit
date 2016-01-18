@@ -1,6 +1,6 @@
 /*Workout Generator*/
 $(document).on('ready page:load', function() {
-	console.log("Jquery is working");
+	console.log("Jquery is working for workout generator.");
 	$( "#threeEquip" ).click(function () {
 		$("#generator").text("This is what you do");
 	})

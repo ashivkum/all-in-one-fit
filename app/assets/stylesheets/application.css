@@ -202,7 +202,14 @@ label {
   padding: 1ex 1em;
 }
 input[type=number] {
+  text-align: right;
   border: none;
+}
+input {
+  float: right;
+}
+span {
+  font-weight: bold;
 }
 
 /*-------- End CSS --------*/
