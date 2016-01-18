@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :users
+  resources :users
   get 'calculators/nutrition'
 
   get 'calculators/workout'
