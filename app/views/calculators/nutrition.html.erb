@@ -1,14 +1,61 @@
 <div class="container">
             <section>
-            	<p>Fill out the following fields to calculate your basal metabolic rate (BMR)- or how many calories your body burns at rest. In other words, if you're overweight and hardly move throughout the day and are eating WAY more than your BMR- you have an idea of just how much you need to cut down.</p>
 
-            	<input id="age" type="number" maxlength="2"><p>Age</p><br>
-            	<input id="height" type="number" maxlength="2"><p> Height- In Inches (12 inches=1 foot)</p>
-            	<input id="weight" type="number" maxlength="3"><p> Weight (in pounds)</p><br>
-            	<input id="female" type="radio" value="female" ><p>Female</p>
-            	<input id="male" type="radio" value="male" ><p>Male</p>
-            	<input id="BMR" type="number"><p> kcal per day</p>
+                  <h1>Fill out the form below to calculate your basic metabolic rate.</h1>
 
+                <label>Female:
+                    <input id="female" type="radio" name="gender" onchange="calsPerDay()">
+                </label> <br>
+                <label>Male:
+                 <input id="male" type="radio" name="gender" onchange="calsPerDay()" checked>
+                </label> <br>
+                <label>Age:
+                 <input id="age" type="number" oninput="calsPerDay()" value="25">years
+                </label> <br>
+                <label>Height:
+                 <input id="height" type="number" oninput="calsPerDay()" value="70">in inches (12 inches=1 foot)
+                </label> <br>
+                <label>Weight:
+                <input id="weight" type="number" oninput="calsPerDay()" value="150">
+                in pounds
+                </label> <br>
+                <label>
+                Base metabolic rate: <span id="totalCals"></span> kcal per day
+                </label>
+
+                </center>
 
             </section>
         </div>
+
+        <script>
+// Calorie Calculators
+
+    function calsPerDay() {
+      function find(id) {
+            return document.getElementById(id)
+      }
+
+      var age = find("age").value
+      var height = find("height").value * 2.54
+      var weight = find("weight").value / 2.2
+      var result = 0
+      if (find("male").checked) 
+        result = 66.47 + (13.75 * weight) + (5.0 * height - (6.75 * age))
+      else if (find("female").checked)
+        result = 665.09 + (9.56 * weight) + (1.84 * height - (4.67 * age))
+      find("totalCals").innerHTML = Math.round( result )
+    }
+    calsPerDay()
+
+/*To determine your basal metabolic rate (BMR), aka how many calories your body burns at rest, use the following formula:
+
+W = weight in kilograms (weight (lbs)/2.2) =weight in kg
+H = height in centimeters (inches x 2.54) =height in cm
+A = age in years
+
+Men: BMR=66.47+ (13.75 x W) + (5.0 x H) - (6.75 x A)
+Women: BMR=665.09 + (9.56 x W) + (1.84 x H) - (4.67 x A) */
+
+/*Workout Generator*/
+        </script>

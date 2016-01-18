@@ -50,3 +50,7 @@ group :production do
 end
 #Bootstrap Form
 gem 'bootstrap_form'
+#For user authentication
+gem 'devise'
+#For user abilities
+gem 'cancan'

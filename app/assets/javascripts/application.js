@@ -1,21 +1,21 @@
 // Calorie Calculators
 
-var age,height,weight,female,male,BMR;
+    function calsPerDay() {
+      function find(id) {
+      	return document.getElementById(id)
+      }
 
-age=document.getElementById("age").value;
-height=document.getElementById("height").value;
-weight=document.getElementById("weight").value;
-female=document.getElementById("female").value;
-male=document.getElementById("male").value;
-BMR=document.getElementById("BMR").value;
-
-function convert(value) {
-	if (value === "male") {
-		BMR= document.getElementById("BMR").value = 66.47 + (13.75 * weight/2.2) + (5.0 * (height * 2.54) - (6.75 x age) 
-	} else if (value === "female") {
-		BMR= document.getElementById("BMR").value = 665.09 + (9.56 * weight/2.2) + (1.84 * (height * 2.54) - (4.67 x age) 
-	}
-}
+      var age = find("age").value
+      var height = find("height").value * 2.54
+      var weight = find("weight").value / 2.2
+      var result = 0
+      if (find("male").checked) 
+        result = 66.47 + (13.75 * weight) + (5.0 * height - (6.75 * age))
+      else if (find("female").checked)
+        result = 665.09 + (9.56 * weight) + (1.84 * height - (4.67 * age))
+      find("totalCals").innerHTML = Math.round( result )
+    }
+    calsPerDay()
 
 /*To determine your basal metabolic rate (BMR), aka how many calories your body burns at rest, use the following formula:
 
@@ -26,5 +26,8 @@ A = age in years
 Men: BMR=66.47+ (13.75 x W) + (5.0 x H) - (6.75 x A)
 Women: BMR=665.09 + (9.56 x W) + (1.84 x H) - (4.67 x A) */
 
+/*Workout Generator*/
 
-//Workout Planning Scripts
+$( ".threeEquip" ).click(function() {
+  $( this ).slideUp();
+});

@@ -195,6 +195,16 @@ footer {
 
 }
 
-
+/*Calories Form */
+label {
+  display: block;
+  box-shadow: 0.1em 0.1em 0.2em #888;
+  margin: 1em;
+  border-radius: 1ex;
+  padding: 1ex 1em;
+}
+input[type=number] {
+  border: none;
+}
 
 /*-------- End CSS --------*/
