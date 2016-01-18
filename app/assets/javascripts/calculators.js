@@ -26,3 +26,18 @@ A = age in years
 Men: BMR=66.47+ (13.75 x W) + (5.0 x H) - (6.75 x A)
 Women: BMR=665.09 + (9.56 x W) + (1.84 x H) - (4.67 x A) */
 
+$(document).on('ready page:load', function() {
+  console.log("Jquery is working for caorie calculator.");
+  $( "#threeEquip" ).click(function () {
+    $("#generator").text("This is what you do");
+  })
+  $( "#threeNoEquip" ).click(function () {
+    $("#generator").text("This is what you do");
+  })
+  $("#fiveEquip").click(function() {
+    $("#generator").text("This is what you do bro");
+  })
+  $("#fiveNoEquip").click(function() {
+    $("#generator").text("This is what you do maaang");
+  })
+});

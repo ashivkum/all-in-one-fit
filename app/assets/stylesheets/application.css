@@ -193,8 +193,6 @@ footer {
 	text-align: center;
 }
 
-}
-
 /*Calories Form */
 label {
   display: block;
@@ -205,14 +203,6 @@ label {
 }
 input[type=number] {
   border: none;
-}
-
-/*Testing Jquery Box Div */
-
-#testDiv {
-    width:100px;
-    height: 100px;
-    background: #000000;
 }
 
 /*-------- End CSS --------*/
