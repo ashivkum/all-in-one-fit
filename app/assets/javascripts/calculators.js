@@ -2,7 +2,7 @@
 $(document).on('ready page:load', function() {
   console.log("Jquery is working for workout generator.");
   $( "#threeEquip" ).click(function () {
-    $("#generator").text("This is what you do");
+    $("#generator").empty().append($("#three-gym-container").html());
   })
   $( "#threeNoEquip" ).click(function () {
     $("#generator").text("This is what you do");
