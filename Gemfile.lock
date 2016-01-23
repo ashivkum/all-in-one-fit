@@ -66,6 +66,7 @@ GEM
       responders
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
+    ejs (1.1.1)
     erubis (2.7.0)
     execjs (2.6.0)
     globalid (0.3.6)
@@ -105,6 +106,11 @@ GEM
       bundler (>= 1.3.0, < 2.0)
       railties (= 4.2.4)
       sprockets-rails
+    rails-backbone (1.2.0)
+      coffee-rails
+      ejs
+      jquery-rails
+      railties
     rails-deprecated_sanitizer (1.0.3)
       activesupport (>= 4.2.0.alpha)
     rails-dom-testing (1.0.7)
@@ -177,6 +183,7 @@ DEPENDENCIES
   jquery-rails (~> 4.1)
   pg
   rails (= 4.2.4)
+  rails-backbone
   rails_12factor
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
@@ -184,6 +191,3 @@ DEPENDENCIES
   turbolinks
   uglifier (>= 1.3.0)
   web-console (~> 2.0)
-
-BUNDLED WITH
-   1.10.6

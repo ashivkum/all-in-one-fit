@@ -54,3 +54,5 @@ gem 'bootstrap_form'
 gem 'devise'
 #For user abilities
 gem 'cancan'
+#Backbone Rails
+gem "rails-backbone"

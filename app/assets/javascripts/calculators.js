@@ -1,8 +1,8 @@
-/*Workout Generator*/
+/*Workout Generator
 $(document).on('ready page:load', function() {
   console.log("Jquery is working for workout generator.");
   $( "#threeEquip" ).click(function () {
-    $("#generator").empty().append($("#three-gym-container").html());
+    $("#generator").text("This is what you do");
   })
   $( "#threeNoEquip" ).click(function () {
     $("#generator").text("This is what you do");
@@ -14,6 +14,7 @@ $(document).on('ready page:load', function() {
     $("#generator").text("This is what you do maaang");
   })
 });
+*/
 
 // Calorie Calculators
 

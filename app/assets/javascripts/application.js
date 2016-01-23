@@ -15,10 +15,7 @@
 //= require turbolinks
 //= require underscore
 //= require backbone
-//= require all_in_one_fit
-//= require_tree ../templates
-//= require_tree ./models
-//= require_tree ./collections
-//= require_tree ./views
-//= require_tree ./routers
+//= require backbone_rails_sync
+//= require backbone_datalink
+//= require backbone/all_in_one_fit
 //= require_tree .
